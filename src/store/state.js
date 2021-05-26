@@ -1,5 +1,5 @@
 
-
 export default {
-    menu: []
+    menu: {},
+    currentApp: ''
 }

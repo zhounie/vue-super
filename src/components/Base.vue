@@ -1,6 +1,7 @@
 <template>
     <div>
         <span @click="handleClick">props：{{test}}</span>
+        <slot name="scope"> default scope </slot>
         <slot />
     </div>
 </template>
@@ -12,7 +13,8 @@ export default {
     },
     methods: {
         handleClick() {
-
+            console.log('click');
+            this.$emit('cm-click')
         }
     }
 }

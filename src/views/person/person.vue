@@ -1,7 +1,12 @@
 <template>
     <div>
         person/person
-        <PmTable :column="column" :tableData="tableData" />
+        <PmTable :column="column" :tableData="tableData" @deleteClick="handleDelete">
+            <template #button>
+                <el-button size="mini">编辑</el-button>
+                <el-button size="mini" type="danger">删除</el-button>
+            </template>
+        </PmTable>
     </div>
 </template>
 
@@ -40,6 +45,11 @@ export default {
     },
     components: {
         PmTable
+    },
+    methods: {
+        handleDelete(scope) {
+            console.log(scope);
+        }
     }
 }
 </script>

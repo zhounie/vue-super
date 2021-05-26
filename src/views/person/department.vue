@@ -4,6 +4,9 @@
 
         <BaseHoc :test="5">
             <h2>哈哈哈</h2>
+            <template v-slot:scope>
+                <h2>scope slot </h2>
+            </template>
         </BaseHoc>
     </div>
 </template>
