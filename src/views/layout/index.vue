@@ -7,7 +7,9 @@
                 <Menu />
             </el-aside>
             <el-main>
-                <router-view></router-view>
+                  <transition name="component-fade">
+                    <router-view></router-view>
+                  </transition>
             </el-main>
         </el-container>
     </el-container>
@@ -43,6 +45,17 @@ export default {
 </script>
 
 <style scoped>
+.component-fade-enter-active,
+.component-fade-leave-active {
+  transition: opacity 0.6s ease;
+}
+
+.component-fade-enter-from,
+.component-fade-leave-to {
+  opacity: 0;
+}
+
+
   .el-header, .el-footer {
     background-color: #B3C0D1;
     color: #333;
