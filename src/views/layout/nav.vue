@@ -36,7 +36,4 @@ export default {
     height: 40px;
     line-height: 40px;
 }
-.nav_wraper {
-    margin-bottom: 20px;
-}
 </style>

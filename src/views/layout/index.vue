@@ -1,9 +1,11 @@
 <template>
     <el-container>
-        <el-header>Header</el-header>
+        <el-header height="68px">
+          <Header />
+        </el-header>
         <Nav />
         <el-container class="main_wraper">
-            <el-aside v-if="!hideMenu" width="200px">
+            <el-aside v-if="!hideMenu" width="213px">
                 <Menu />
             </el-aside>
             <el-main>
@@ -19,11 +21,13 @@
 <script>
 import Menu from './menu'
 import Nav from './nav'
+import Header from './header'
 export default {
   name: 'App',
   components: {
       Menu,
-      Nav
+      Nav,
+      Header
   },
   data() {
     return {
@@ -56,22 +60,23 @@ export default {
 }
 
 
-  .el-header, .el-footer {
-    background-color: #B3C0D1;
+  .el-header {
+    background: linear-gradient(180deg, #89D2FE 0%, #4A96FF 100%);
     color: #333;
     text-align: center;
+    height: 68px;
   }
 
   .el-aside {
-    background-color: #D3DCE6;
-    color: #333;
+    background-color: #FDFEFF;
     text-align: center;
+    padding-top: 20px;
   }
 
   .el-main {
-    background-color: #E9EEF3;
-    color: #333;
+    background-color: #FAFBFC;
     text-align: center;
+    padding-top: 20px;
   }
 
   body > .el-container {
@@ -79,7 +84,7 @@ export default {
   }
 
     .main_wraper {
-        height: calc(100vh - 121px);
+        height: calc(100vh - 68px - 41px);
     }
   /* .el-container:nth-child(5) .el-aside,
   .el-container:nth-child(6) .el-aside {

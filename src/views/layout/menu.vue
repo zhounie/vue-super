@@ -3,13 +3,13 @@
       :default-active="defaultActive"
       class="el-menu-vertical-demo"
       router
+      unique-opened
+      text-color="#31415E"
+      active-text-color="#fff"
       @select="handleSelect"
       @open="handleOpen"
       @close="handleClose">
-      <el-menu-item v-for="(item) in menu" :key="item.path" :index="item.path">
-        <i class="el-icon-menu"></i>
-        <template #title>{{item.name}}</template>
-      </el-menu-item>
+      <MenuItem :menu="menu" />
     </el-menu>
 </template>
 
@@ -18,6 +18,7 @@
 import { person, settings } from '@/mock/menu'
 import { SET_MENU, SET_CURRENT_APP } from '@/store/types'
 import { getCurrentApp } from '@/utils'
+import MenuItem from './menuItem'
 export default {
   computed: {
     currentApp() {
@@ -76,6 +77,15 @@ export default {
       console.log('seelct');
       console.log(index, indexPath);
     }
+  },
+  components: {
+    MenuItem
   }
 }
 </script>
+
+<style scoped>
+.el-menu {
+  border: none;
+}
+</style>
