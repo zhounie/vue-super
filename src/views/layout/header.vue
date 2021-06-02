@@ -30,7 +30,6 @@
     justify-content: space-between;
     h2 {
         font-size: 24px;
-        font-family: PingFangSC-Bold, PingFang SC;
         font-weight: bold;
         color: #fff;
     }

@@ -10,5 +10,7 @@ export default {
 </script>
 
 <style>
-
+html {
+  font-family: "PingFang", "PingFang Regular";
+}
 </style>

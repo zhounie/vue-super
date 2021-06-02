@@ -2,7 +2,7 @@
     <div>
         <!-- 12312321
         <el-button type="primary" @click="handleClick">主要按钮</el-button> -->
-        <el-button type="danger" @click="handleClick">删除</el-button>
+        <el-button type="danger" @click="handleEelete">删除</el-button>
         <el-button type="success" @click="handleClick">新增</el-button>
 
         <!-- <PmAlert  /> -->
@@ -28,7 +28,7 @@
 import { ref } from 'vue'
 export default {
     setup() {
-        const dialogVisible = ref(true)
+        const dialogVisible = ref(false)
         return {
             dialogVisible
         }
@@ -38,14 +38,16 @@ export default {
     },
     methods: {
         handleClick() {
-            // this.$pmAlert({}).then((res) => {
-            //     console.log(res);
-            //     console.log('thenthenthenthenthen');
-            // }).catch((error) => {
-            //     console.log(error);
-            //     console.log('catchcatchcatchcatch');
-            // })
             this.dialogVisible = true
+        },
+        handleEelete () {
+            this.$pmAlert({}).then((res) => {
+                console.log(res);
+                console.log('thenthenthenthenthen');
+            }).catch((error) => {
+                console.log(error);
+                console.log('catchcatchcatchcatch');
+            })
         },
         handleClose() {
 

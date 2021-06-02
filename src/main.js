@@ -5,6 +5,7 @@ import ElementPlus from 'element-plus';
 import 'element-plus/lib/theme-chalk/index.css';
 import '@/assets/styles/elDialog.less'
 import '@/assets/styles/elButton.less'
+import "@/assets/styles/fonts.css"
 
 import 'normalize.css' // 重置css样式
 
