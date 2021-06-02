@@ -48,7 +48,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .component-fade-enter-active,
 .component-fade-leave-active {
   transition: opacity 0.6s ease;
@@ -75,7 +75,6 @@ export default {
 
   .el-main {
     background-color: #FAFBFC;
-    text-align: center;
     padding-top: 20px;
   }
 

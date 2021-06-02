@@ -3,6 +3,8 @@ import App from './App.vue'
 
 import ElementPlus from 'element-plus';
 import 'element-plus/lib/theme-chalk/index.css';
+import '@/assets/styles/elDialog.less'
+import '@/assets/styles/elButton.less'
 
 import 'normalize.css' // 重置css样式
 
@@ -10,9 +12,7 @@ import router from './router'
 
 import store from './store'
 
-
-
-
+import PmAlert from '@/components/PmAlert.js'
 
 const app = createApp(App)
 
@@ -24,5 +24,6 @@ app.config.devtools = true
 
 app.use(ElementPlus)
 app.use(router)
+app.use(PmAlert)
 app.use(store)
 app.mount('#app')
